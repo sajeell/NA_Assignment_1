@@ -41,5 +41,5 @@ double getAdditionRE(double a, double b)
 
 int main()
 {
-
+	cout << "checking";
 }
