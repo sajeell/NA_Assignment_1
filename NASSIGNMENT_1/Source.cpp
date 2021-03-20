@@ -13,101 +13,23 @@ int countDecimals(double num)
 	return subStr.length();
 }
 
-double getAdditionAE(double a, double b)
+double getPowerAE(double a, double b)
 {
-	double sum = a + b;
-
-	double errorOfA = 0.5 * pow(10, -countDecimals(a));
-	double errorOfB = 0.5 * pow(10, -countDecimals(b));
-
-	double absoluteError = abs(errorOfA) + abs(errorOfB);
-
-	return absoluteError;
-}
-
-double getAdditionRE(double a, double b)
-{
-	double sum = a + b;
-
-	double errorOfA = 0.5 * pow(10, -countDecimals(a));
-	double errorOfB = 0.5 * pow(10, -countDecimals(b));
-
-	double absoluteError = abs(errorOfA) + abs(errorOfB);
-
-	double relativeError = absoluteError / abs(sum);
-
-	return relativeError;
-}
-
-double getSubtractionAE(double a, double b)
-{
-	double sum = a + b;
-
-	double errorOfA = 0.5 * pow(10, -countDecimals(a));
-	double errorOfB = 0.5 * pow(10, -countDecimals(b));
-
-	double absoluteError = abs(errorOfA) + abs(errorOfB);
-
-	return absoluteError;
-}
-
-double getSubtractionRE(double a, double b)
-{
-	double sum = a + b;
-
-	double errorOfA = 0.5 * pow(10, -countDecimals(a));
-	double errorOfB = 0.5 * pow(10, -countDecimals(b));
-
-	double absoluteError = abs(errorOfA) + abs(errorOfB);
-
-	double relativeError = absoluteError / abs(sum);
-
-	return relativeError;
-}
-
-double getMultiplicationAE(double a, double b)
-{
-	double product = a * b;
+	double answer = a / b;
 
 	double errorOfA = 0.5 * pow(10, -countDecimals(a));
 	double errorOfB = 0.5 * pow(10, -countDecimals(b));
 
 	double relativeError = abs(errorOfA / a) + abs(errorOfB / b);
 
-	double absoluteError = relativeError * product;
+	double absoluteError = relativeError * answer;
 
 	return absoluteError;
 }
 
-double getMultiplicationRE(double a, double b)
+double getPowerRE(double a, double b)
 {
-	double product = a * b;
-
-	double errorOfA = 0.5 * pow(10, -countDecimals(a));
-	double errorOfB = 0.5 * pow(10, -countDecimals(b));
-
-	double relativeError = abs(errorOfA / a) + abs(errorOfB / b);
-
-	return relativeError;
-}
-
-double getDivisionAE(double a, double b)
-{
-	double product = a * b;
-
-	double errorOfA = 0.5 * pow(10, -countDecimals(a));
-	double errorOfB = 0.5 * pow(10, -countDecimals(b));
-
-	double relativeError = abs(errorOfA / a) + abs(errorOfB / b);
-
-	double absoluteError = relativeError * product;
-
-	return absoluteError;
-}
-
-double getDivisionRE(double a, double b)
-{
-	double product = a * b;
+	double answer = a / b;
 
 	double errorOfA = 0.5 * pow(10, -countDecimals(a));
 	double errorOfB = 0.5 * pow(10, -countDecimals(b));
