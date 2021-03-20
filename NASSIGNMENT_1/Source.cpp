@@ -39,7 +39,31 @@ double getPowerRE(double a, double b)
 	return relativeError;
 }
 
+double getRootAE(double a, double power)
+{
+	double answer = pow(a, power);
+
+	double errorOfA = 0.5 * pow(10, -countDecimals(a));
+
+	double relativeError = abs(power) * abs(errorOfA / a);
+
+	double absoluteError = relativeError * answer;
+
+	return absoluteError;
+}
+
+double getRootRE(double a, double power)
+{
+	double answer = pow(a, power);
+
+	double errorOfA = 0.5 * pow(10, -countDecimals(a));
+
+	double relativeError = abs(power) * abs(errorOfA / a);
+
+	return relativeError;
+}
+
 int main()
 {
-	cout << getMultiplicationRE(4.0643, 0.37487);
+
 }
