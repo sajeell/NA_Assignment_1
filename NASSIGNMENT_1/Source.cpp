@@ -65,7 +65,6 @@ double getSubtractionRE(double a, double b)
 	return relativeError;
 }
 
-
 double getMultiplicationAE(double a, double b)
 {
 	double product = a * b;
@@ -81,6 +80,32 @@ double getMultiplicationAE(double a, double b)
 }
 
 double getMultiplicationRE(double a, double b)
+{
+	double product = a * b;
+
+	double errorOfA = 0.5 * pow(10, -countDecimals(a));
+	double errorOfB = 0.5 * pow(10, -countDecimals(b));
+
+	double relativeError = abs(errorOfA / a) + abs(errorOfB / b);
+
+	return relativeError;
+}
+
+double getDivisionAE(double a, double b)
+{
+	double product = a * b;
+
+	double errorOfA = 0.5 * pow(10, -countDecimals(a));
+	double errorOfB = 0.5 * pow(10, -countDecimals(b));
+
+	double relativeError = abs(errorOfA / a) + abs(errorOfB / b);
+
+	double absoluteError = relativeError * product;
+
+	return absoluteError;
+}
+
+double getDivisionRE(double a, double b)
 {
 	double product = a * b;
 
